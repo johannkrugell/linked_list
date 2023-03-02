@@ -13,6 +13,12 @@ class LinkedListTest < Minitest::Test
   # adds a new node containing value to the end of the list
   def test_append_list
     @list.append('John Doe')
-    assert_equal 'John Doe', @list.tail.value
+    # node = @head
+    assert_equal 'John Doe', @list.head.next_node.value
+  end
+
+  def test_prepend_list
+    @list.prepend('Jane Doe')
+    assert_equal 'Jane Doe', @list.head.next_node.value
   end
 end
