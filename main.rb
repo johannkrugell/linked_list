@@ -42,4 +42,14 @@ class LinkedList < Node
       puts current_node.value
     end
   end
+
+  def size
+    current_node = @head
+    count = 0
+    while (current_node = current_node.next_node)
+      count += 1
+    end
+    count
+  end
+
 end

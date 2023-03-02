@@ -21,4 +21,10 @@ class LinkedListTest < Minitest::Test
     @list.prepend('Jane Doe')
     assert_equal 'Jane Doe', @list.head.next_node.value
   end
+
+  def test_list_size
+    @list.append('John Doe')
+    @list.append('Jane Doe')
+    assert_equal 2, @list.size
+  end
 end
