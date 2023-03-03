@@ -58,4 +58,11 @@ class LinkedListTest < Minitest::Test
     @list.append('Bob Doe')
     assert_equal true, @list.contains?('Jane Doe')
   end
+
+  def test_find
+    @list.append('John Doe')
+    @list.append('Jane Doe')
+    @list.append('Bob Doe')
+    assert_equal 1, @list.find('Jane Doe')
+  end
 end

@@ -83,4 +83,13 @@ class LinkedList < Node
     end
     false
   end
+
+  def find(value)
+    current_node = @head
+    count = 0
+    while (current_node = current_node.next_node)
+      return count if current_node.value == value
+      count += 1
+    end
+  end
 end
