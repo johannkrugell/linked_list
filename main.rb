@@ -59,4 +59,14 @@ class LinkedList < Node
   def tail
     @tail.next_node
   end
+
+  def at(index)
+    current_node = @head
+    count = 0
+    while (current_node = current_node.next_node)
+      return current_node.value if count == index
+      count += 1
+    end
+  end
+
 end
