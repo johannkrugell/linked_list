@@ -73,4 +73,12 @@ class LinkedListTest < Minitest::Test
     assert_equal '( John Doe ) -> ( Jane Doe ) -> ( Bob Doe ) -> nil', @list.to_s
   end
 
+  def test_insert_at
+    @list.append('John Doe')
+    @list.append('Jane Doe')
+    @list.append('Bob Doe')
+    @list.insert_at('Sally Doe', 2)
+    assert_equal 'Sally Doe', @list.at(2)
+  end
+
 end
