@@ -52,4 +52,8 @@ class LinkedList < Node
     count
   end
 
+  def head
+    @head.next_node
+  end
+
 end

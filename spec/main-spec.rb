@@ -14,17 +14,22 @@ class LinkedListTest < Minitest::Test
   def test_append_list
     @list.append('John Doe')
     # node = @head
-    assert_equal 'John Doe', @list.head.next_node.value
+    assert_equal 'John Doe', @list.head.value
   end
 
   def test_prepend_list
     @list.prepend('Jane Doe')
-    assert_equal 'Jane Doe', @list.head.next_node.value
+    assert_equal 'Jane Doe', @list.head.value
   end
 
   def test_list_size
     @list.append('John Doe')
     @list.append('Jane Doe')
     assert_equal 2, @list.size
+  end
+
+  def test_head
+    @list.append('John Doe')
+    assert_equal 'John Doe', @list.head.value
   end
 end
