@@ -13,7 +13,6 @@ class LinkedListTest < Minitest::Test
   # adds a new node containing value to the end of the list
   def test_append_list
     @list.append('John Doe')
-    # node = @head
     assert_equal 'John Doe', @list.head.value
   end
 
@@ -44,4 +43,12 @@ class LinkedListTest < Minitest::Test
     @list.append('Bob Doe')
     assert_equal 'Jane Doe', @list.at(1)
   end
+
+  def test_pop
+    @list.append('John Doe')
+    @list.append('Jane Doe')
+    @list.append('Bob Doe')
+    @list.pop
+    assert_equal 2, @list.size 
+  end 
 end

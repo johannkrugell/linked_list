@@ -69,4 +69,11 @@ class LinkedList < Node
     end
   end
 
+  def pop
+    current_node = @head
+    while (current_node = current_node.next_node)
+      return current_node.next_node = nil if current_node.next_node.next_node.nil?
+    end
+  end
+
 end
