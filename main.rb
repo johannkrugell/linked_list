@@ -92,4 +92,13 @@ class LinkedList < Node
       count += 1
     end
   end
+
+  def to_s
+    current_node = @head
+    string = ''
+    while (current_node = current_node.next_node)
+      string += "( #{current_node.value} ) -> "
+    end
+    string += 'nil'
+  end
 end
