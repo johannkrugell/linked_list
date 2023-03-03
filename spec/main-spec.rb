@@ -81,4 +81,12 @@ class LinkedListTest < Minitest::Test
     assert_equal 'Sally Doe', @list.at(2)
   end
 
+  def test_remove_at
+    @list.append('John Doe')
+    @list.append('Jane Doe')
+    @list.append('Bob Doe')
+    @list.remove_at(1)
+    assert_equal 'Bob Doe', @list.at(1)
+  end
+
 end

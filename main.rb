@@ -113,4 +113,16 @@ class LinkedList < Node
       count += 1
     end
   end
+
+  def remove_at(index)
+    current_node = @head
+    count = 0
+    while (current_node = current_node.next_node)
+      if count == index-1
+        current_node.next_node = current_node.next_node.next_node
+        return
+      end
+      count += 1
+    end
+  end
 end
