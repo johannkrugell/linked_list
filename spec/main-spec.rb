@@ -32,4 +32,9 @@ class LinkedListTest < Minitest::Test
     @list.append('John Doe')
     assert_equal 'John Doe', @list.head.value
   end
+
+  def test_tail
+    @list.append('John Doe')
+    assert_equal 'John Doe', @list.tail.value
+  end
 end

@@ -56,4 +56,7 @@ class LinkedList < Node
     @head.next_node
   end
 
+  def tail
+    @tail.next_node
+  end
 end
