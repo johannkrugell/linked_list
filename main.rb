@@ -8,15 +8,17 @@ class Node
     @value = value
     @next_node = next_node
   end
+
+  def value
+    @value
+  end
 end
 
 # Linked List class that initializes list and has list methods
 class LinkedList < Node
-  attr_accessor :name
-  attr_reader :head, :tail
+  attr_accessor :head, :tail
 
-  def initialize(name)
-    @name = name
+  def initialize(value)
     @head = Node.new(nil, nil)
     @tail = Node.new(nil, nil)
   end
@@ -50,14 +52,6 @@ class LinkedList < Node
       count += 1
     end
     count
-  end
-
-  def head
-    @head.next_node
-  end
-
-  def tail
-    @tail.next_node
   end
 
   def at(index)
@@ -126,3 +120,9 @@ class LinkedList < Node
     end
   end
 end
+
+# list = LinkedList.new('list')
+# puts list.name
+# puts @head
+# list.head.next_node = Node.new('John Doe', nil) 
+# list.print_list
